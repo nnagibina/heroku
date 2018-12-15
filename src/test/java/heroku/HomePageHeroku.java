@@ -20,6 +20,11 @@ public class HomePageHeroku extends BasePageHeroku {
 
     private By sectionContentImg = By.tagName("img");
 
+    private By joinButton = By.xpath("//*[@id='bs-example-navbar-collapse-1']/ul/li[2]/p/a");
+
+    public void clickOnJoinButton() {
+        clickOn(joinButton);
+    }
 
 //    private By listBox = By.xpath("//*[@id='algolia-autocomplete-listbox-0']");
 
