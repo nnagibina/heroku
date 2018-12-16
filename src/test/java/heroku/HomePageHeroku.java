@@ -2,6 +2,10 @@ package heroku;
 
 import org.openqa.selenium.By;
 
+/**
+ * Created by Natasha 12/16/2018
+ */
+
 public class HomePageHeroku extends BasePageHeroku {
 
     private By searchBar = By.id("aa-search-input");
@@ -9,8 +13,6 @@ public class HomePageHeroku extends BasePageHeroku {
     private By listBox = By.id("algolia-autocomplete-listbox-0");
 
     private By textFieldError = By.xpath("//*[@id='aa-input-container']/span/pre");
-
- //   private By sectionContent = By.xpath("/html/body/div[2]/div");
 
     private By sectionContent = By.className("col-md-3");
 

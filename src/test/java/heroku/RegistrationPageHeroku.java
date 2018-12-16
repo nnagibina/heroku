@@ -2,6 +2,10 @@ package heroku;
 
 import org.openqa.selenium.By;
 
+/**
+ * Created by Natasha 12/16/2018
+ */
+
 public class RegistrationPageHeroku extends BasePageHeroku {
     private By pageHeader = By.xpath("//*[@id='bs-example-navbar-collapse-1']");
 
