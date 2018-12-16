@@ -9,7 +9,7 @@ import stepdefinition.SharedSD;
 import java.util.List;
 
 /**
- * Created by Natasha.
+ * Created by Natasha 12/09/2018
  */
 public class BasePageHeroku {
 
@@ -24,6 +24,7 @@ public class BasePageHeroku {
 
 	public void sendText(By locator, String text) {
 		try {
+			SharedSD.getDriver().findElement(locator).clear();
 			SharedSD.getDriver().findElement(locator).sendKeys(text);
 		} catch (NoSuchElementException e) {
 			Assert.fail("Element is not found with this locator: " + locator.toString());
