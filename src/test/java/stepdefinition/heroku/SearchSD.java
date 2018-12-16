@@ -21,7 +21,7 @@ public class SearchSD {
     public void iSearchOnTopSearchBarWithText(String text) throws InterruptedException {
         homePageHeroku.clearBar(homePageHeroku.getSearchBar());
         homePageHeroku.sendText(homePageHeroku.getSearchBar(), text);
-        Thread.sleep(2000);
+        Thread.sleep(5000);
     }
 
     @Then("^I verify (.+) as displayed result$")

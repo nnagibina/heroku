@@ -11,4 +11,4 @@ Feature: Heroku Project
     Examples:
      | email |
      | test.com |
-#     | test@test@test.com |
+     | test@test@test.com |

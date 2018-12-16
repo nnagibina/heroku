@@ -6,13 +6,19 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import heroku.HomePageHeroku;
 import heroku.RegistrationPageHeroku;
+import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import stepdefinition.SharedSD;
 
 import javax.swing.*;
+import java.io.File;
+import java.io.IOException;
+import java.util.Calendar;
 
 
 public class InvalidEmailSD {
@@ -37,23 +43,18 @@ public class InvalidEmailSD {
         switch (button) {
             case "submit":
                 this.registrationPageHeroku.clickOn(this.registrationPageHeroku.getSubmitButton());
-                this.registrationPageHeroku.clickOn(this.registrationPageHeroku.getSubmitButton());
                 break;
         }
     }
 
     @Then("^I verify invalid email address$")
-    public void iVerifyInvalidEmailAddress() {
-
-        WebElement element = SharedSD.getDriver().findElement(By.xpath("/html/head"));
-        String toolTipText = element.getAttribute("title");
-
-        Actions actions = new Actions(SharedSD.getDriver());
-
-        String title = SharedSD.getDriver().findElement(this.registrationPageHeroku.getBody()).getAttribute("title");
-        System.out.println(title);
-
-
+    public void iVerifyInvalidEmailAddress() throws IOException {
+        File scrFile = ((TakesScreenshot)SharedSD.getDriver()).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File("scr_" + Calendar.getInstance().get(Calendar.MILLISECOND) + ".png"));
     }
+
+
+
+
 
 }

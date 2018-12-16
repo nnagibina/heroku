@@ -13,7 +13,7 @@ public class RegistrationPageHeroku extends BasePageHeroku {
 
     private By submitButton = By.xpath("/html/body/div/div/div/form/button");
 
-    private By body = By.xpath("/html/body");
+    private By listHeader = By.xpath("//*[@id='bs-example-navbar-collapse-1']/ul");
 
     public By getPageHeader() {
         return pageHeader;
@@ -35,7 +35,7 @@ public class RegistrationPageHeroku extends BasePageHeroku {
         return submitButton;
     }
 
-    public By getBody() {
-        return body;
+    public By getListHeader() {
+        return listHeader;
     }
 }
